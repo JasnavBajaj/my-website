@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     typeWriter();
     
 });
+<<<<<<< HEAD
 
 
 const skillsData = [
@@ -143,3 +144,5 @@ function initializeSkills() {
 
 // Initialize when the document is loaded
 document.addEventListener('DOMContentLoaded', initializeSkills);
+=======
+>>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
