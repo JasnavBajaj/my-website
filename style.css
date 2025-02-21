@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 * {
     margin: 0;
     padding: 0;
@@ -155,12 +151,12 @@ a:hover {
 /*SECTIONS*/
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+    padding: 2vh 0; /* Reduced vertical padding */
+    margin: 0 8rem; /* Remove side margins */
     box-sizing: border-box;
     min-height: fit-content;
 }
+
 
 .section-container {
     display: flex;
@@ -182,10 +178,6 @@ section {
     margin: auto 0;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 .section__text {
     align-self: center;
     text-align: center;
@@ -276,36 +268,12 @@ section {
 
 #about {
     position: relative;
-<<<<<<< HEAD
-    margin-bottom: 0rem;
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 }
 
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-<<<<<<< HEAD
-    display: block; 
-    justify-content: space-between; 
-}
-
-.about-details-container {
-    display: block; 
-    text-align: center;
-    flex: 1; 
-}
-
-.text-container {
-    flex: 1; 
-    padding: 1rem;
-    background: white;
-    border-radius: 2rem;
-    /* border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163); */
-    text-align: center;
-=======
 }
 
 .about-details-container {
@@ -316,7 +284,6 @@ section {
 .about-containers,
 .about-details-container {
     display: flex;
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 }
 
 .about-pic {
@@ -330,12 +297,8 @@ section {
 }
 
 .details-container {
-<<<<<<< HEAD
-    padding: 1rem;
-=======
     padding: 1.5rem;
     flex: 1;
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
@@ -353,11 +316,6 @@ section {
     width: 400px;
     margin: auto 0;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 /* EXPERIENCE*/
 
 #experience {
@@ -399,55 +357,89 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+
 #projects {
     position: relative;
+    margin: 0 8rem;
+    padding: 2vh 0;
 }
 
-<<<<<<< HEAD
 .project-containers {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 2rem; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .color-container {
-    border-color: rgb(163, 163, 163);
+    border-radius: 1rem;
+    border: rgb(163, 163, 163) 0.1rem solid;
     background: rgb(250, 250, 250);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    flex: 1; 
-    gap: 1rem; 
-=======
-.color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.color-container:hover {
+    transform: translateY(-5px);
 }
 
 .project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 250px;
+    border-radius: 1rem;
+    object-fit: cover;
 }
 
 .project-title {
-    margin: 1rem;
+    margin: 1rem 0;
     color: black;
 }
 
-.project-button {
+.project-btn {
     color: black;
-    border-color: rgb(163, 163, 163);
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    color: white;
+}
+
+/* Media Queries for Projects Section */
+@media screen and (max-width: 1200px) {
+    #projects {
+        margin: 0 5%;
+    }
+    
+    .project-containers {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-containers {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-img {
+        height: 200px;
+    }
+    
+    .project-title {
+        font-size: 1.25rem;
+    }
+    
+    .button-container {
+        gap: 0.5rem;
+    }
+    
+    .project-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
 /* CONTACT */
 
 #contact {
@@ -456,6 +448,7 @@ article .icon {
     flex-direction: column;
     height: 70vh;
 }
+
 
 .contact-info-upper-container {
     display: flex;
@@ -489,102 +482,76 @@ article .icon {
 }
 
 
-<<<<<<< HEAD
-/* Skills Section Styles */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
-    }
+  }
 
-    .skill-card {
+  .skill-card {
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    }
+  }
 
-    .skill-card:hover {
+  .skill-card:hover {
     transform: translateY(-5px);
-    }
+  }
 
-    .skill-category {
+  .skill-category {
     font-size: 1.25rem;
     color: rgb(85, 85, 85);
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    }
+  }
 
-    .skill-item {
+  .skill-item {
     margin-bottom: 1.5rem;
-    }
+  }
 
-    .skill-header {
+  .skill-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    }
+  }
 
-    .skill-name {
+  .skill-name {
     font-weight: 500;
     color: rgb(85, 85, 85);
-    }
+  }
 
-    .skill-level {
+  .skill-level {
     background: #f0f0f0;
     color: rgb(85, 85, 85);
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.875rem;
-    }
+  }
 
-    .progress-bar {
+  .progress-bar {
     width: 100%;
     height: 8px;
     background: #e2e8f0;
     border-radius: 4px;
     overflow: hidden;
-    }
+  }
 
-    .progress {
+  .progress {
     height: 100%;
     background: rgb(85, 85, 85);
     border-radius: 4px;
     transition: width 1s ease-in-out;
-    }
+  }
 
-    #skills {
+  /* Matches your existing section styling */
+  #skills {
     margin-top: 4rem;
-    }
-=======
-/* SKILLS */
-#skills {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.skills-container h3 {
-    font-weight: 600;
-}
-
-.article-container article {
-    display: flex;
-    gap: 0.5rem;
-}
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
+  }
 
 
 /* Typing and Erasing Animation */
@@ -622,7 +589,3 @@ article .icon {
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 00f4baac73fa2c8acfbe307e8b345b8ede91df93
