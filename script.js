@@ -13,7 +13,7 @@ function toggleMenu() {
           if (index < text.length) {
               document.querySelector(".typewriter-text").innerHTML += text.charAt(index);
               index++;
-              setTimeout(typeWriter, 100); // Adjust typing speed here
+              setTimeout(typeWriter, 100); 
           }
       }
   
@@ -25,65 +25,41 @@ function toggleMenu() {
   
   const skillsData = [
     {
-      category: "Machine Learning",
-      icon: "fas fa-brain",
-      skills: [
-        { name: "TensorFlow/Keras", level: 90 },
-        { name: "PyTorch", level: 85 },
-        { name: "Scikit-learn", level: 95 },
-        { name: "Deep Learning", level: 85 }
-      ]
-    },
-    {
-      category: "Data Engineering",
-      icon: "fas fa-database",
-      skills: [
-        { name: "SQL", level: 90 },
-        { name: "Apache Spark", level: 80 },
-        { name: "Data Pipeline Design", level: 85 },
-        { name: "ETL Processes", level: 85 }
-      ]
-    },
-    {
-      category: "Programming",
-      icon: "fas fa-code",
+      category: "Programming Languages:",
+      icon: "fas fa-Languages",
       skills: [
         { name: "Python", level: 95 },
-        { name: "R", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "C++", level: 70 }
+        { name: "JavaScript", level: 70 },
+        { name: "Java", level: 95 },
+        { name: "C", level: 70 },
+        { name: "HTML/CSS", level: 90 },
       ]
     },
     {
-      category: "Data Visualization",
-      icon: "fas fa-chart-bar",
+      category: "Developer Tools:",
+      icon: "fas fa-Languages",
       skills: [
-        { name: "Matplotlib", level: 90 },
-        { name: "Seaborn", level: 85 },
+        { name: "Git", level: 75 },
+        { name: "Jupyter Notebook", level: 95 },
+        { name: "VS Code", level: 95 },
+        { name: "npm", level: 70 },
+        { name: "uvicorn", level: 70 },
+        { name: "pip", level: 70 },
+      ]
+    },
+    {
+      category: "Frameworks/Libraries",
+      icon: "fas fa-Frameworks",
+      skills: [
+        { name: "Pandas", level: 75 },
+        { name: "OpenCV (cv2)", level: 70 },
+        { name: "NumPy", level: 75 },
+        { name: "Scikit-learn", level: 70 },
         { name: "Plotly", level: 80 },
-        { name: "Tableau", level: 75 }
+        { name: "nltk", level: 65 },
+        { name: "joblib", level: 70 }
       ]
     },
-    {
-      category: "Version Control & DevOps",
-      icon: "fas fa-code-branch",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 85 },
-        { name: "CI/CD", level: 80 },
-        { name: "Kubernetes", level: 75 }
-      ]
-    },
-    {
-      category: "MLOps",
-      icon: "fas fa-flask",
-      skills: [
-        { name: "Model Deployment", level: 85 },
-        { name: "Model Monitoring", level: 80 },
-        { name: "ML Pipeline Design", level: 85 },
-        { name: "Model Optimization", level: 80 }
-      ]
-    }
   ];
 
   function createSkillCard(categoryData) {
