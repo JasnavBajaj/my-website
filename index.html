@@ -1,336 +1,554 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaQueries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Engineer Portfolio</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <nav id="desktop-nav">
-        <div class="logo">Jasnav Bajaj</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- ============================================
+         Navigation Bar
+         Fixed at the top with smooth scrolling links
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo with gradient accent on "ML" -->
+            <div class="nav-logo">
+                <a href="#home">
+                    <!-- <span class="logo-accent">ML</span>Portfolio -->
+                </a>
+            </div>
+            <!-- Navigation menu items -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
-        </div>
-    </nav>
-    
-    <nav id="hamburger-nav">
-        <div class="logo">Jasnav Bajaj</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <!-- Hamburger menu icon for mobile devices -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
-    
 
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="Jasnav Bajaj profile picture" />
+    <!-- ============================================
+         Hero Section
+         Main landing area with name, title, and CTA buttons
+         ============================================ -->
+<section id="home" class="hero">
+    <div class="hero-background">
+        <div class="geometric-shape shape-1"></div>
+        <div class="geometric-shape shape-2"></div>
+        <div class="geometric-shape shape-3"></div>
+    </div>
+    <div class="hero-content fade-in">
+        <h1 class="hero-name">
+            <span class="name-line">Jasnav</span>
+            <span class="name-line accent">Bajaj</span>
+        </h1>
+        <div class="hero-badge">Software Engineer & ML Enthusiast</div>
+        <p class="hero-tagline">
+            Building technology that solves real problems, from healthcare solutions to full-stack applications
+        </p>
+        <div class="hero-cta">
+            <a href="#projects" class="cta-button primary">View Work</a>
+            <a href="#contact" class="cta-button secondary">Get in Touch</a>
         </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+</section>
 
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Jasnav Bajaj</h1>
-            <p class="section__text__p2 typing-loop" >ML Engineer</p>
-            <div class="button-container">
-                <button class="button button-color-2" onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
-                </button>
-                <button class="button button-color-1" onclick="location.href='./#Contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-                    onclick="location.href='https://linkedin.com/'" />
-                <img src="./assets/github.png" alt="My Github profile" class="icon"
-                    onclick="location.href='https://github.com/'" />
-            </div>
-
+    <!-- ============================================
+         About Section
+         Personal introduction and background information
+         ============================================ -->
+    <section id="about" class="about">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-number">01</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="section-line"></div>
         </div>
-    </section>
-
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-
-
-
-            <!-- <div class="section__pic-container">
-                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
-            </div> -->
-
-
-            <div class="text-container">
-                <h2>Hey there!</h2>
-                <br>
-                <p>
-                    I'm an enthusiast who's completely fascinated by the world of data science and artificial intelligence. 
-                    I've always been drawn to the idea of using data to solve complex problems and create meaningful solutions.
+        <div class="about-grid">
+<div class="about-image fade-in">
+    <div class="image-placeholder">
+        <div class="placeholder-content">
+            <img src="/assets/profile-image.jpg" alt="👩‍💻" class="profile-image">
+        </div>
+        <div class="image-accent"></div>
+    </div>
+</div>
+            <div class="about-text fade-in">
+                <p class="about-intro">
+                    I'm a Computer Science student at Western University passionate about building 
+                    technology that makes a real difference, especially in healthcare.
                 </p>
-                <br>
-                <p>
-                    From building predictive models to diving into natural language processing. 
-                    Each project has been a unique challenge, and I've loved every minute of it. 
-                    I believe data isn't just numbers—it's a story waiting to be told, and I enjoy being the one to uncover it.  
+                <p>Honored to be a recipient of the PointClickCare Women in Computer Science Award, Dean's Honours List recognition, and Western Scholarship.  
+                    I've been exploring how software can improve health outcomes and solve 
+                    complex technical challenges. From machine learning models to full-stack applications 
+                    to real-time computer vision systems, I love understanding how different technologies 
+                    work together.
                 </p>
-                <br>
                 <p>
-                    I'm always eager to learn more and stay on the cutting edge of technology, whether that means exploring new algorithms or diving into the latest research.
+                    I am a fast learner who thrives on challenges and I'm always eager to 
+                    dive into new technologies, whether that's building with React and FastAPI, training 
+                    ML models, or architecting scalable systems.
                 </p>
-                <br>
-                <p>
-                    On this site, I've collected some of my favourite projects. 
-                    I hope you'll find them as interesting as I do! If you're a fellow data enthusiast or just curious about what I do, I'd love to hear from you. 
-                    Let's connect and see what we can build together.
-                </p>
-                <br>
-            </div>
-            <br>
-            <br>
-
-
-
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                        <h3>Admission Scholarship Awardee</h3>
-                        <p>Worth $25,000</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Projects</div>
                     </div>
-                    <br>
-                    <br>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
-                        <h3>Education</h3>
-                        <p>B.Sc in Computer scince at Western University</p>
+                    <div class="stat-item">
+                        <div class="stat-number"></div>
+                        <div class="stat-label"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Passion</div>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
-        
-    </section>
+    </div>
+</section>
 
-
-
-
-
-
-
-
-
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="project-containers">
-    
-    
-                <div class="details-container color-container">
-                    <div class="article-conatiner">
-                        <img 
-                            src="./assets/project-1.png" 
-                            alt="Project 1" 
-                            class="project-img" 
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Movie Recommender website</h2>
-                    <div class="button-container">
-    
-                        <button class="button button-color-2 project-button"
-                            onclick="location.href='https://github.com/'">GitHub
-                        </button>
-    
-                        <button 
-                            class="button button-color-2 project-button" 
-                            onclick="location.href='https://github.com/'">
-                            Live Demo
-                        </button>
-    
-                    </div>
-                </div>
-    
-    
-    
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img 
-                            src="./assets/project-2.png" 
-                            alt="Project 2" 
-                            class="project-img" 
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Disease Prediction website</h2>
-                    <div class="button-container">
-    
-                        <button class="button button-color-2 project-btn"
-                            onclick="location.href='https://github.com/'">
-                            Github
-                        </button>
-    
-                        <button 
-                            class="button button-color-2 project-btn" 
-                            onclick="location.href='https://github.com/'">
-                            Live Demo
-                        </button>
-    
-                    </div>
-                </div>
-    
-    
-    
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img 
-                            src="./assets/project-3.png" 
-                            alt="Project 3" 
-                            class="project-img" 
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project-3</h2>
-                    <div class="button-container">
-    
-                        <button class="button button-color-2 project-btn"
-                            onclick="location.href='https://github.com/'">Github
-                        </button>
-    
-                        <button 
-                            class="button button-color-2 project-btn" 
-                            onclick="location.href='https://github.com/'">
-                            Live Demo
-                        </button>
-    
-                    </div>
-                </div>
-
-
-            </div>
+    <!-- ============================================
+         Projects Section
+         Showcase of featured ML projects with details
+         ============================================ -->
+    <section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-line"></div>
         </div>
-
-    
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="skills">
-        <p class="section__text__p1">What I Am Good At</p>
-        <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
-            <div class="skills-grid" id="skillsGrid">
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
+        <div class="projects-grid">
             
-            <div class="contact-info-container">
-                <img
-                    src="./assets/email.png"
-                    alt="Email icon"
-                    class="icon contact-icon email-icon"
-                />
-                <p><a href="mailto:bjasnav@gmail.com">Email</a></p>
+            <!-- Project 1: Disease Prediction System -->
+            <div class="project-card fade-in">
+                <div class="project-number">01</div>
+                <div class="project-header">
+                    <h3 class="project-title">Disease Prediction System</h3>
+                    <div class="project-category">Machine Learning</div>
+                </div>
+                <p class="project-description">
+                    End-to-end healthcare ML system leveraging SVM, Naive Bayes, and Random Forest 
+                    with ensemble voting. Built RESTful API backend with FastAPI and responsive 
+                    React frontend with searchable symptom checker interface.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/JasnavBajaj/Disease-Prediction-Using-Machine-Learning" target="_blank" class="project-link">
+                        <span>GitHub</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <div class="project-accent"></div>
             </div>
 
-            <div class="contact-info-container">
-                <img
-                    src="./assets/linkedin.png"
-                    alt="LinkedIn icon"
-                    class="icon contact-icon"
-                />
-                <p><a href="https://www.linkedin.com/in/jasnav-bajaj-258a80299/">LinkedIn</a></p>
+            <!-- Project 2: Virtual Pet Game -->
+            <div class="project-card fade-in">
+                <div class="project-number">02</div>
+                <div class="project-header">
+                    <h3 class="project-title">Virtual Pet Game</h3>
+                    <div class="project-category">Software Engineering</div>
+                </div>
+                <p class="project-description">
+                    Java-based virtual pet simulation demonstrating advanced OOP design principles. 
+                    Led 4-person team using GitLab, implementing State, Observer, Factory, and 
+                    Singleton patterns with 95%+ JUnit test coverage and save system.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JUnit</span>
+                    <span class="tech-tag">GitLab</span>
+                    <span class="tech-tag">OOP Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://youtu.be/fElcKRz3YZI" target="_blank" class="project-link">
+                        <span>Demo</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                    <a href="https://github.com/JasnavBajaj/Virtual-Pet-Game" target="_blank" class="project-link">
+                        <span>GitHub</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <div class="project-accent"></div>
+            </div>
+
+            <!-- Project 3: Human Activity Recognition -->
+            <div class="project-card fade-in">
+                <div class="project-number">03</div>
+                <div class="project-header">
+                    <h3 class="project-title">Human Activity Recognition</h3>
+                    <div class="project-category">Computer Vision</div>
+                </div>
+                <p class="project-description">
+                    Real-time activity recognition system using pre-trained deep learning model 
+                    with OpenCV's DNN module. Implemented GPU acceleration with CUDA backend and 
+                    flexible CLI for processing video files and live webcam streams.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">CUDA</span>
+                    <span class="tech-tag">Deep Learning</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/JasnavBajaj/Human-Activity-Recognition" target="_blank" class="project-link">
+                        <span>GitHub</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <div class="project-accent"></div>
+            </div>
+
+            <!-- Project 4: Movie Recommender System -->
+            <div class="project-card fade-in">
+                <div class="project-number">04</div>
+                <div class="project-header">
+                    <h3 class="project-title">Movie Recommender System</h3>
+                    <div class="project-category">ML Systems</div>
+                </div>
+                <p class="project-description">
+                    Content-based recommendation engine using TMDB metadata and cosine similarity. 
+                    Built Streamlit web app with movie poster fetching via TMDB API. Applied NLP 
+                    preprocessing with stemming and Count Vectorization for textual matching.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Pandas</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/JasnavBajaj/Movie-Recommender-System" target="_blank" class="project-link">
+                        <span>GitHub</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+                <div class="project-accent"></div>
             </div>
             
-            <div class="contact-info-container">    
-                <img
-                    src="./assets/github.png"
-                    alt="GitHub icon"
-                    class="icon contact-icon"
-                />
-                <p><a href="https://github.com/JasnavBajaj">GitHub</a></p>
+<!-- Project 5: Star Classification -->
+<div class="project-card fade-in">
+    <div class="project-number">05</div>
+    <div class="project-header">
+        <h3 class="project-title">Star Dataset Analysis & Classification</h3>
+        <div class="project-category">Data Science</div>
+    </div>
+    <p class="project-description">
+        Comprehensive stellar data analysis using machine learning to predict star categories 
+        based on physical attributes. Explored patterns in temperature, luminosity, and radius 
+        across dwarf stars, main sequence, and giants using AdaBoost, Decision Tree, and 
+        Random Forest classifiers with 95%+ accuracy.
+    </p>
+    <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Scikit-learn</span>
+        <span class="tech-tag">Pandas</span>
+        <span class="tech-tag">Matplotlib</span>
+    </div>
+    <div class="project-links">
+        <a href="https://github.com/JasnavBajaj/Star-Dataset-Analysis-and-Classification" target="_blank" class="project-link">
+            <span>GitHub</span>
+            <span class="link-arrow">→</span>
+        </a>
+    </div>
+    <div class="project-accent"></div>
+</div>
+            
+<!-- Project 6: GameMathLib -->
+<div class="project-card fade-in">
+    <div class="project-number">06</div>
+    <div class="project-header">
+        <h3 class="project-title">GameMathLib</h3>
+        <div class="project-category">C++ Library</div>
+    </div>
+    <p class="project-description">
+        Header-only C++17 game mathematics library providing vector operations, matrix 
+        transforms, and collision detection. Built with modern C++ features, cross-platform 
+        CMake configuration, and comprehensive GoogleTest suite achieving 95%+ code coverage 
+        for Windows, macOS, and Linux.
+    </p>
+    <div class="project-tech">
+        <span class="tech-tag">C++17</span>
+        <span class="tech-tag">CMake</span>
+        <span class="tech-tag">GoogleTest</span>
+        <span class="tech-tag">Cross-Platform</span>
+    </div>
+    <div class="project-links">
+        <a href="https://github.com/JasnavBajaj/GameMathLib" target="_blank" class="project-link">
+            <span>GitHub</span>
+            <span class="link-arrow">→</span>
+        </a>
+    </div>
+    <div class="project-accent"></div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ============================================
+         Skills Section
+         Technical skills displayed with progress bars
+         ============================================ -->
+    <section id="skills" class="skills">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid fade-in">
+            
+            <!-- Column 1: Programming Languages -->
+            <div class="skills-column">
+                <div class="skill-category-header">
+                    <span class="category-icon">💻</span>
+                    <h3 class="skill-category-title">Languages</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">R</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">C</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Frameworks & Libraries -->
+            <div class="skills-column">
+                <div class="skill-category-header">
+                    <span class="category-icon">🧠</span>
+                    <h3 class="skill-category-title">Frameworks & Libraries</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">FastAPI</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Scikit-learn</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">OpenCV</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Pandas</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">NumPy</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Tools & Technologies -->
+            <div class="skills-column">
+                <div class="skill-category-header">
+                    <span class="category-icon">🛠️</span>
+                    <h3 class="skill-category-title">Tools & Tech</h3>
+                </div>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Git / GitHub</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">GitLab</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">VS Code</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Jupyter Notebook</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">npm</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">REST APIs</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ============================================
+         Contact Section
+         Contact information and links
+         ============================================ -->
+    <section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-content fade-in">
+            <p class="contact-intro">
+                I'm actively seeking Summer 2026 co-op opportunities and always open to discussing 
+                interesting projects, new technologies, or just chatting about software engineering 
+                and healthcare tech.
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:bjasnav@gmail.com" class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <span class="contact-icon">✉</span>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-label">Email</h3>
+                        <p class="contact-value">bjasnav@gmail.com</p>
+                    </div>
+                    <div class="contact-arrow">→</div>
+                </a>
+                <a href="https://linkedin.com/in/jasnavbajaj" target="_blank" class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <span class="contact-icon">🔗</span>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-label">LinkedIn</h3>
+                        <p class="contact-value">Connect with me</p>
+                    </div>
+                    <div class="contact-arrow">→</div>
+                </a>
+                <a href="https://github.com/JasnavBajaj" target="_blank" class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <span class="contact-icon">💻</span>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="contact-label">GitHub</h3>
+                        <p class="contact-value">View my code</p>
+                    </div>
+                    <div class="contact-arrow">→</div>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    
-
-
-
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <!-- ============================================
+         Footer
+         Copyright and navigation links
+         ============================================ -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 Jasnav Bajaj. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
             </div>
-        </nav>
-        <p>Copyright &#169; 2023 Jasnav Bajaj. All Rights Reserved.</p>
-    </footer>
-    
+        </div>
+    </div>
+</footer>
 
-      
-
+    <!-- External JavaScript file for interactivity and animations -->
     <script src="script.js"></script>
 </body>
-
 </html>
+
